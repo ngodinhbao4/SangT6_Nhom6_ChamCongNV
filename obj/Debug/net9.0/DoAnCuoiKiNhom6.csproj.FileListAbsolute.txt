@@ -141,3 +141,4 @@ F:\DoAn\DoAnCuoiKiNhom6\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
 F:\DoAn\DoAnCuoiKiNhom6\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 F:\DoAn\DoAnCuoiKiNhom6\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
 F:\DoAn\DoAnCuoiKiNhom6\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+F:\DoAn\DoAnCuoiKiNhom6\obj\Debug\net9.0\DoAnCuoiKiNhom6.sourcelink.json

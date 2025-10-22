@@ -1,6 +1,7 @@
 ﻿using DoAnCuoiKiNhom6.Data;
 using DoAnCuoiKiNhom6.Models;
 using DoAnCuoiKiNhom6.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -101,6 +102,32 @@ namespace DoAnCuoiKiNhom6.Controllers
             {
                 email,
                 role
+            });
+        }
+
+        // ✅ Kiểm tra token hiện tại (token validity)
+        [HttpGet("check-token")]
+        [Authorize] // cần gửi token mới vào được
+        public IActionResult CheckToken()
+        {
+            var email = User?.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Email)?.Value;
+            var role = User?.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Role)?.Value;
+            var expClaim = User?.Claims.FirstOrDefault(c => c.Type == "exp")?.Value;
+
+            if (email == null)
+                return Unauthorized("Token không hợp lệ hoặc đã hết hạn.");
+
+            // Nếu có claim exp (thời gian hết hạn)
+            DateTime? expiry = null;
+            if (expClaim != null && long.TryParse(expClaim, out long seconds))
+                expiry = DateTimeOffset.FromUnixTimeSeconds(seconds).LocalDateTime;
+
+            return Ok(new
+            {
+                message = "Token hợp lệ",
+                email,
+                role,
+                expiresAt = expiry?.ToString("yyyy-MM-dd HH:mm:ss")
             });
         }
     }

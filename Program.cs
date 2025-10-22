@@ -4,20 +4,58 @@ using DoAnCuoiKiNhom6.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using System.Diagnostics;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Kết nối MySQL
+// ✅ 1. Kết nối MySQL
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
     new MySqlServerVersion(new Version(8, 0, 36))));
 
+// ✅ 2. Cấu hình dịch vụ
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
+// ✅ 3. Swagger + JWT authorize
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "Attendance System API",
+        Version = "v1",
+        Description = "API chấm công nhân viên sử dụng thẻ NFC, vân tay hoặc khuôn mặt."
+    });
+
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "Nhập token theo định dạng: **Bearer {token}**"
+    });
+
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            new string[] {}
+        }
+    });
+});
+
+// ✅ 4. Cấu hình JWT Authentication
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -29,40 +67,44 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuerSigningKey = true,
             ValidIssuer = builder.Configuration["Jwt:Issuer"],
             ValidAudience = builder.Configuration["Jwt:Audience"],
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])
+            )
         };
     });
 
+// ✅ 5. Đăng ký các service
 builder.Services.AddScoped<JwtService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 var app = builder.Build();
 
-// Luôn bật Swagger
+// ✅ 6. Bật Swagger luôn khi chạy
 app.UseSwagger();
 app.UseSwaggerUI(options =>
 {
     options.SwaggerEndpoint("/swagger/v1/swagger.json", "Attendance API v1");
-    options.RoutePrefix = string.Empty; // Mở swagger tại URL gốc
+    options.RoutePrefix = string.Empty;
 });
 
+// ✅ 7. Bảo mật và routing
 app.UseHttpsRedirection();
+app.UseAuthentication();  // 🔥 Bắt buộc đặt trước Authorization
 app.UseAuthorization();
 app.MapControllers();
-app.UseAuthentication();
-app.UseAuthorization();
 
-// ✅ Đặt lệnh mở trình duyệt NGAY SAU khi server khởi động
+// ✅ 8. Tự động mở Swagger trên trình duyệt
 app.Lifetime.ApplicationStarted.Register(() =>
 {
     try
     {
-        var url = app.Urls.FirstOrDefault() ?? "https://localhost:7161"; // đổi port nếu khác
+        var url = app.Urls.FirstOrDefault() ?? "https://localhost:7161";
         Process.Start(new ProcessStartInfo
         {
             FileName = url,
-            UseShellExecute = true // mở bằng trình duyệt mặc định
+            UseShellExecute = true
         });
-        Console.WriteLine($"Swagger đã mở tại: {url}");
+        Console.WriteLine($"✅ Swagger đã mở tại: {url}");
     }
     catch (Exception ex)
     {
@@ -70,11 +112,11 @@ app.Lifetime.ApplicationStarted.Register(() =>
     }
 });
 
+// ✅ 9. Tự động tạo Admin mặc định
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
 
-    // ✅ Tự động tạo tài khoản ADMIN mặc định nếu chưa có
     if (!db.Users.Any(u => u.Role == "ADMIN"))
     {
         var defaultAdmin = new User
@@ -83,7 +125,6 @@ using (var scope = app.Services.CreateScope())
             PasswordHash = BCrypt.Net.BCrypt.HashPassword("admin123"),
             Role = "ADMIN"
         };
-
         db.Users.Add(defaultAdmin);
         db.SaveChanges();
 
@@ -97,5 +138,5 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
-// 🚀 Chạy ứng dụng
+// 🚀 10. Chạy ứng dụng
 app.Run();
