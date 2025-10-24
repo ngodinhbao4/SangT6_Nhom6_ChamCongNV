@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yrZ1rPH7G6k=",
+  "dgSpecHash": "P58xBqHRr8A=",
   "success": true,
-  "projectFilePath": "F:\\DoAn\\DoAnCuoiKiNhom6\\DoAnCuoiKiNhom6.csproj",
+  "projectFilePath": "F:\\App\\SangT6_Nhom6_ChamCongNV\\SangT6_Nhom6_ChamCongNV.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MSI\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\MSI\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

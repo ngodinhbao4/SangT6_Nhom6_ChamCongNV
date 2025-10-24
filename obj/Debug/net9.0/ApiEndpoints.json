@@ -307,7 +307,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[DoAnCuoiKiNhom6.WeatherForecast, DoAnCuoiKiNhom6, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[DoAnCuoiKiNhom6.WeatherForecast, SangT6_Nhom6_ChamCongNV, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

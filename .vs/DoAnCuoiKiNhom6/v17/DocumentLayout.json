@@ -11,10 +11,6 @@
       "RelativeMoniker": "D:0:0:{EB28E0F8-1F6B-4BEF-8BE7-B8C83A9738A8}|DoAnCuoiKiNhom6.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\DoAn\\DoAnCuoiKiNhom6\\Migrations\\20251022145404_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20251022145404_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EB28E0F8-1F6B-4BEF-8BE7-B8C83A9738A8}|DoAnCuoiKiNhom6.csproj|f:\\doan\\doancuoikinhom6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB28E0F8-1F6B-4BEF-8BE7-B8C83A9738A8}|DoAnCuoiKiNhom6.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -25,6 +21,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{EB28E0F8-1F6B-4BEF-8BE7-B8C83A9738A8}|DoAnCuoiKiNhom6.csproj|f:\\doan\\doancuoikinhom6\\controllers\\payrollcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB28E0F8-1F6B-4BEF-8BE7-B8C83A9738A8}|DoAnCuoiKiNhom6.csproj|solutionrelative:controllers\\payrollcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB28E0F8-1F6B-4BEF-8BE7-B8C83A9738A8}|DoAnCuoiKiNhom6.csproj|f:\\doan\\doancuoikinhom6\\migrations\\20251022145404_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB28E0F8-1F6B-4BEF-8BE7-B8C83A9738A8}|DoAnCuoiKiNhom6.csproj|solutionrelative:migrations\\20251022145404_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +38,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "20251022145404_init.cs",
               "DocumentMoniker": "F:\\DoAn\\DoAnCuoiKiNhom6\\Migrations\\20251022145404_init.cs",
               "RelativeDocumentMoniker": "Migrations\\20251022145404_init.cs",
@@ -46,8 +46,7 @@
               "RelativeToolTip": "Migrations\\20251022145404_init.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T14:54:04.334Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T14:54:04.334Z"
             },
             {
               "$type": "Document",
@@ -59,12 +58,11 @@
               "RelativeToolTip": "Controllers\\AuthController.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAYwIMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T14:44:54.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T14:44:54.511Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "F:\\DoAn\\DoAnCuoiKiNhom6\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -72,12 +70,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAkwDYAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T14:40:51.865Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T14:40:51.865Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "F:\\DoAn\\DoAnCuoiKiNhom6\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -85,8 +82,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAQAAAAAAAAAAAAiwBYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-22T14:37:08.034Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T14:37:08.034Z"
             },
             {
               "$type": "Document",
@@ -103,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "PayrollController.cs",
               "DocumentMoniker": "F:\\DoAn\\DoAnCuoiKiNhom6\\Controllers\\PayrollController.cs",
               "RelativeDocumentMoniker": "Controllers\\PayrollController.cs",
@@ -111,8 +107,7 @@
               "RelativeToolTip": "Controllers\\PayrollController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T14:22:21.641Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T14:22:21.641Z"
             }
           ]
         }

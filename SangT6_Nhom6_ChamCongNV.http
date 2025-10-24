@@ -1,0 +1,6 @@
+@SangT6_Nhom6_ChamCongNV_HostAddress = http://localhost:5278
+
+GET {{SangT6_Nhom6_ChamCongNV_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

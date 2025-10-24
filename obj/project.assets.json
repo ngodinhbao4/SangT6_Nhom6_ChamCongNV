@@ -3659,11 +3659,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\DoAn\\DoAnCuoiKiNhom6\\DoAnCuoiKiNhom6.csproj",
-      "projectName": "DoAnCuoiKiNhom6",
-      "projectPath": "F:\\DoAn\\DoAnCuoiKiNhom6\\DoAnCuoiKiNhom6.csproj",
+      "projectUniqueName": "F:\\App\\SangT6_Nhom6_ChamCongNV\\SangT6_Nhom6_ChamCongNV.csproj",
+      "projectName": "SangT6_Nhom6_ChamCongNV",
+      "projectPath": "F:\\App\\SangT6_Nhom6_ChamCongNV\\SangT6_Nhom6_ChamCongNV.csproj",
       "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-      "outputPath": "F:\\DoAn\\DoAnCuoiKiNhom6\\obj\\",
+      "outputPath": "F:\\App\\SangT6_Nhom6_ChamCongNV\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
