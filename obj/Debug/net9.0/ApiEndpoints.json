@@ -1,8 +1,8 @@
 [
   {
     "ContainingType": "DoAnCuoiKiNhom6.Controllers.AttendanceController",
-    "Method": "CheckIn",
-    "RelativePath": "api/Attendance/checkin",
+    "Method": "Tap",
+    "RelativePath": "api/Attendance/tap",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -10,22 +10,6 @@
       {
         "Name": "nfcTagId",
         "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "DoAnCuoiKiNhom6.Controllers.AttendanceController",
-    "Method": "CheckOut",
-    "RelativePath": "api/Attendance/checkout/{attendanceId}",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "attendanceId",
-        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

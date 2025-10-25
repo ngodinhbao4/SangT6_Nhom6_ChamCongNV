@@ -6,7 +6,7 @@
     "version": "v1"
   },
   "paths": {
-    "/api/Attendance/checkin": {
+    "/api/Attendance/tap": {
       "post": {
         "tags": [
           "Attendance"
@@ -30,29 +30,6 @@
             }
           }
         },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Attendance/checkout/{attendanceId}": {
-      "post": {
-        "tags": [
-          "Attendance"
-        ],
-        "parameters": [
-          {
-            "name": "attendanceId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -611,7 +588,7 @@
     "securitySchemes": {
       "Bearer": {
         "type": "apiKey",
-        "description": "Nhập token theo định dạng: **Bearer {token}**",
+        "description": "Nhập token: Bearer {token}",
         "name": "Authorization",
         "in": "header"
       }
