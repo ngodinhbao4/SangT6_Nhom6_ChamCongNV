@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "F:\\App\\SangT6_Nhom6_ChamCongNV\\SangT6_Nhom6_ChamCongNV.csproj": {}
+    "C:\\Users\\danghoaibao\\Source\\Repos\\SangT6_Nhom6_ChamCongNV\\SangT6_Nhom6_ChamCongNV.csproj": {}
   },
   "projects": {
-    "F:\\App\\SangT6_Nhom6_ChamCongNV\\SangT6_Nhom6_ChamCongNV.csproj": {
+    "C:\\Users\\danghoaibao\\Source\\Repos\\SangT6_Nhom6_ChamCongNV\\SangT6_Nhom6_ChamCongNV.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\App\\SangT6_Nhom6_ChamCongNV\\SangT6_Nhom6_ChamCongNV.csproj",
+        "projectUniqueName": "C:\\Users\\danghoaibao\\Source\\Repos\\SangT6_Nhom6_ChamCongNV\\SangT6_Nhom6_ChamCongNV.csproj",
         "projectName": "SangT6_Nhom6_ChamCongNV",
-        "projectPath": "F:\\App\\SangT6_Nhom6_ChamCongNV\\SangT6_Nhom6_ChamCongNV.csproj",
-        "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-        "outputPath": "F:\\App\\SangT6_Nhom6_ChamCongNV\\obj\\",
+        "projectPath": "C:\\Users\\danghoaibao\\Source\\Repos\\SangT6_Nhom6_ChamCongNV\\SangT6_Nhom6_ChamCongNV.csproj",
+        "packagesPath": "C:\\Users\\danghoaibao\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\danghoaibao\\Source\\Repos\\SangT6_Nhom6_ChamCongNV\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\danghoaibao\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -106,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
