@@ -78,22 +78,35 @@ namespace DoAnCuoiKiNhom6.Controllers
         }
 
         // ✅ Nhân viên xem thông tin cá nhân (dựa theo email trong token JWT)
+        // ✅ Nhân viên xem thông tin cá nhân (theo email trong JWT)
         [HttpGet("me")]
         [Authorize(Roles = "EMPLOYEE,ADMIN")]
         public async Task<IActionResult> GetMyProfile()
         {
             var email = User?.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
 
-            if (email == null)
-                return Unauthorized("Không tìm thấy thông tin người dùng trong token.");
+            if (string.IsNullOrEmpty(email))
+                return Unauthorized("Token không hợp lệ hoặc đã hết hạn.");
 
-            var employee = await _context.Employees.FirstOrDefaultAsync(e => e.Email == email);
+            var employee = await _context.Employees
+                .AsNoTracking()
+                .FirstOrDefaultAsync(e => e.Email == email);
 
             if (employee == null)
                 return NotFound("Không tìm thấy nhân viên.");
 
-            return Ok(employee);
+            // ✅ Trả về dữ liệu gọn gàng, dễ dùng cho Flutter
+            return Ok(new
+            {
+                employee.EmployeeId,
+                employee.FullName,
+                employee.Email,
+                employee.HourlyRate,
+                employee.NfcTagId,
+                employee.IsBanned
+            });
         }
+
 
         // ✅ Admin có thể ban / gỡ ban một nhân viên
         [HttpPut("ban/{id}")]

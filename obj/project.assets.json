@@ -3653,23 +3653,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\danghoaibao\\.nuget\\packages\\": {},
+    "C:\\Users\\MSI\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\danghoaibao\\Source\\Repos\\SangT6_Nhom6_ChamCongNV\\SangT6_Nhom6_ChamCongNV.csproj",
+      "projectUniqueName": "F:\\App\\SangT6_Nhom6_ChamCongNV\\SangT6_Nhom6_ChamCongNV.csproj",
       "projectName": "SangT6_Nhom6_ChamCongNV",
-      "projectPath": "C:\\Users\\danghoaibao\\Source\\Repos\\SangT6_Nhom6_ChamCongNV\\SangT6_Nhom6_ChamCongNV.csproj",
-      "packagesPath": "C:\\Users\\danghoaibao\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\danghoaibao\\Source\\Repos\\SangT6_Nhom6_ChamCongNV\\obj\\",
+      "projectPath": "F:\\App\\SangT6_Nhom6_ChamCongNV\\SangT6_Nhom6_ChamCongNV.csproj",
+      "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
+      "outputPath": "F:\\App\\SangT6_Nhom6_ChamCongNV\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\danghoaibao\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3758,7 +3758,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

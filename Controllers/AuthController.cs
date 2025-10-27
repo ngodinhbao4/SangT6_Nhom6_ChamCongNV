@@ -130,5 +130,38 @@ namespace DoAnCuoiKiNhom6.Controllers
                 expiresAt = expiry?.ToString("yyyy-MM-dd HH:mm:ss")
             });
         }
+
+        // ✅ Đổi mật khẩu
+        [HttpPut("change-password")]
+        [Authorize] // Cần đăng nhập mới đổi được
+        public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordRequest request)
+        {
+            // Lấy email từ token
+            var email = User?.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Email)?.Value;
+            if (email == null)
+                return Unauthorized("Token không hợp lệ hoặc đã hết hạn.");
+
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+            if (user == null)
+                return NotFound("Không tìm thấy người dùng.");
+
+            // Kiểm tra mật khẩu cũ
+            if (!BCrypt.Net.BCrypt.Verify(request.OldPassword, user.PasswordHash))
+                return BadRequest("Mật khẩu cũ không đúng.");
+
+            // Hash mật khẩu mới
+            user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.NewPassword);
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "✅ Đổi mật khẩu thành công!" });
+        }
+
+        // ✅ DTO cho yêu cầu đổi mật khẩu
+        public class ChangePasswordRequest
+        {
+            public string OldPassword { get; set; } = string.Empty;
+            public string NewPassword { get; set; } = string.Empty;
+        }
+
     }
 }
