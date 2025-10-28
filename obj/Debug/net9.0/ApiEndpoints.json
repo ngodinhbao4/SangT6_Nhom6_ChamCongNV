@@ -273,6 +273,27 @@
   },
   {
     "ContainingType": "DoAnCuoiKiNhom6.Controllers.ReportController",
+    "Method": "Send",
+    "RelativePath": "api/Report/send",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "kind",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anchor",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DoAnCuoiKiNhom6.Controllers.ReportController",
     "Method": "SendMonthly",
     "RelativePath": "api/Report/send-monthly",
     "HttpMethod": "POST",
@@ -294,6 +315,90 @@
   },
   {
     "ContainingType": "DoAnCuoiKiNhom6.Controllers.ReportController",
+    "Method": "SendRange",
+    "RelativePath": "api/Report/send-range",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "start",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "end",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "label",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DoAnCuoiKiNhom6.Controllers.ReportController",
+    "Method": "SendSalarySummary",
+    "RelativePath": "api/Report/send-summary",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "month",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DoAnCuoiKiNhom6.Controllers.ReportController",
+    "Method": "SendTest",
+    "RelativePath": "api/Report/send-test",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "to",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DoAnCuoiKiNhom6.Controllers.ReportController",
+    "Method": "Summary",
+    "RelativePath": "api/Report/summary",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "kind",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anchor",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DoAnCuoiKiNhom6.Controllers.ReportController",
     "Method": "SummaryMonth",
     "RelativePath": "api/Report/summary-month",
     "HttpMethod": "GET",
@@ -308,6 +413,79 @@
       {
         "Name": "month",
         "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DoAnCuoiKiNhom6.Controllers.ReportController",
+    "Method": "SummaryRange",
+    "RelativePath": "api/Report/summary-range",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "start",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "end",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "label",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DoAnCuoiKiNhom6.Controllers.ReportController",
+    "Method": "SummaryRangeCsv",
+    "RelativePath": "api/Report/summary-range.csv",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "start",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "end",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "label",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DoAnCuoiKiNhom6.Controllers.ReportController",
+    "Method": "SummaryCsv",
+    "RelativePath": "api/Report/summary.csv",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "kind",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "anchor",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       }
     ],
